@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        playerControls.Movement.Turbo.started += _ => Turbo();
+        playerControls.Movement.Turbo.started += _ => Turbo();        
     }
 
     private void Update()
@@ -78,5 +78,10 @@ public class PlayerController : MonoBehaviour
     private void Turbo()
     {
         Debug.Log("Turbo!!");
+    }
+
+    public float GetMoveDirection()
+    {
+        return Mathf.RoundToInt(moveDir.x);
     }
 }
