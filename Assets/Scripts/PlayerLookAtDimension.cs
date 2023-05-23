@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerLookAtDimension : MonoBehaviour
 {
+    [SerializeField] GameObject head;
 
     private void Update()
     {
@@ -18,17 +19,15 @@ public class PlayerLookAtDimension : MonoBehaviour
 
         if (Input.mousePosition.x < playerPosition.x)
         {
-            Debug.Log("Links");
-            transform.eulerAngles = new Vector3(0, 90, 0);
+            head.transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (Input.mousePosition.x > playerPosition.x)
         {
-            Debug.Log("Rechts");
-            transform.eulerAngles = new Vector3(0, -90, 0);
+            head.transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else
         {
-            Debug.Log("Fehler");
+            Debug.LogWarning("Fehler in PlayerLookAtDimension.cs!");
         }
     }
 

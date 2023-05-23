@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private int maxDoubleJumps = 1;
 
+
+    private Animator animator;
     private int doubleJumpCount = 0;
     private bool isGrounded;
     private Vector3 moveDir;
@@ -20,11 +22,16 @@ public class PlayerController : MonoBehaviour
     {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
     {
         playerControls.Enable();
+    }
+    private void Start()
+    {
+        playerControls.Movement.Turbo.started += _ => Turbo();
     }
 
     private void Update()
@@ -57,6 +64,7 @@ public class PlayerController : MonoBehaviour
         moveDir.y = 0;
         moveDir.z = 0;
         rb.MovePosition(rb.position + moveDir * (Time.fixedDeltaTime * moveSpeed));
+        animator.SetFloat("isMoving", Mathf.RoundToInt(moveDir.x));
     }
     private void PlayerJump()
     {
@@ -65,5 +73,10 @@ public class PlayerController : MonoBehaviour
             doubleJumpCount++;
             rb.AddForce(Vector3.up * jumpingPower, ForceMode.Impulse);
         }
+    }
+
+    private void Turbo()
+    {
+        Debug.Log("Turbo!!");
     }
 }
