@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpingPower;
     [SerializeField] private float moveSpeed;
     [SerializeField] private int maxDoubleJumps = 1;
+    public float MoveSpeed { get { return moveSpeed; } set {  moveSpeed = value; } }
+    public int MaxDoubleJumps { get { return maxDoubleJumps; } set { maxDoubleJumps = value; } }
+
 
 
     private Animator animator;
@@ -29,10 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         playerControls.Enable();
     }
-    private void Start()
-    {
-        playerControls.Movement.Turbo.started += _ => Turbo();        
-    }
 
     private void Update()
     {
@@ -52,10 +51,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.gameObject.CompareTag("Path"))
+        if (other.collider.gameObject.CompareTag("Path") || other.collider.gameObject.CompareTag("PathWithBoni"))
         {
             isGrounded = true;
             doubleJumpCount = 0;
+        }
+        if (other.collider.gameObject.CompareTag("Path"))
+        {
+
+        }
+        if (other.collider.gameObject.CompareTag("PathWithBoni"))
+        {
+            other.gameObject.GetComponent<PathBoni>().ActivateBoni(this);
         }
     }
 
@@ -75,13 +82,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Turbo()
-    {
-        Debug.Log("Turbo!!");
-    }
-
     public float GetMoveDirection()
     {
         return Mathf.RoundToInt(moveDir.x);
     }
+
 }
