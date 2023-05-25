@@ -6,12 +6,21 @@ using UnityEngine;
 public class PlayerLookAtDimension : MonoBehaviour
 {
     [SerializeField] GameObject headLook;
+    [SerializeField] GameObject[] dimensions = new GameObject[2];
+    [SerializeField] int DimensionMouseThresholdPercentage;
+
+    private int DimensionMouseThreshold;
 
     PlayerController playerController;
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
+    }
+
+    private void Start()
+    {
+        DimensionMouseThreshold = Camera.main.pixelWidth / 100 * DimensionMouseThresholdPercentage;
     }
 
     private void Update()
@@ -26,19 +35,28 @@ public class PlayerLookAtDimension : MonoBehaviour
         float lookScale = 1;
         if (playerController.GetMoveDirection() != 0) { lookScale *= -1; }
 
-        if (Input.mousePosition.x < playerPosition.x)
+        if (Input.mousePosition.x + DimensionMouseThreshold < playerPosition.x)
         {
             headLook.transform.localScale = new Vector3(1, 1, -lookScale);
+            Camera.main.backgroundColor = new Color(.1f,.1f,.1f);
+            ActivateDimension(0);
         }
-        else if (Input.mousePosition.x > playerPosition.x)
+        else if (Input.mousePosition.x - DimensionMouseThreshold > playerPosition.x)
         {
             //head.transform.eulerAngles = new Vector3(0, -90, 0);
             headLook.transform.localScale = new Vector3(1, 1, lookScale);
+            Camera.main.backgroundColor = Color.blue;
+            ActivateDimension(1);
         }
-        else
+    }
+
+    private void ActivateDimension(int dimension)
+    {
+        foreach (GameObject obj in dimensions)
         {
-            Debug.LogWarning("Fehler in PlayerLookAtDimension.cs!");
+            obj.SetActive(false);
         }
+        dimensions[dimension].SetActive(true);
     }
 
 }
