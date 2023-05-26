@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS-Files/TitleUI.uss?fileID=7433441132597879392&amp;guid=b192a50a8627880448d98e26e4c19d4c&amp;type=3#TitleUI" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="Top" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; height: 194px;">
+            <ui:Label tabindex="-1" text="DIMENSIONS JUMPER" display-tooltip-when-elided="true" name="Label" style="flex-grow: 1; font-size: 135px; -unity-text-align: middle-center; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(84, 255, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Middle" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-text-align: middle-center; align-items: center; justify-content: center;" />
+        <ui:VisualElement name="Bottom" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; height: 387px; align-items: center; justify-content: center;">
+            <ui:Button text="Start" display-tooltip-when-elided="true" name="Start" class="Buttons" />
+            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="Buttons" />
+            <ui:Button text="Credits" display-tooltip-when-elided="true" name="Credits" class="Buttons" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -53,7 +53,12 @@ public class PathBoni : MonoBehaviour
     {
         player.MoveSpeed += speedBoni;
         isBoniActive = true;
-        yield return new WaitForSeconds(boniDuration);
+        for (int i = 0; i < boniDuration; i++)
+        {
+            Debug.Log(i);
+            yield return new WaitForSecondsRealtime(1f);
+            StatusbarManager.Instance.SetTimerLabel("Speedbuff " + (boniDuration - i) + "seconds");
+        }
         isBoniActive = false;
         player.MoveSpeed -= speedBoni;
     }
@@ -67,6 +72,8 @@ public class PathBoni : MonoBehaviour
         isBoniActive = false;
         player.MaxDoubleJumps -= jumpBoni;
     }
+
+
 
 
 }
