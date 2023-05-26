@@ -347,8 +347,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 264511517}
+  m_Follow: {fileID: 264511517}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -375,8 +375,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127030794}
-  m_LocalRotation: {x: 0.1013483, y: -0.000000058423318, z: 0.0000000059517493, w: 0.99485105}
-  m_LocalPosition: {x: -0.99999845, y: 3.8165293, z: -13.194571}
+  m_LocalRotation: {x: 0.10134829, y: -0.000000059297733, z: 0.0000000060408283, w: 0.99485105}
+  m_LocalPosition: {x: 0.0000015729154, y: 3.5115292, z: -13.1945715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -834,6 +834,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860d42e1226df3340a7eac6345ef6b8d, type: 3}
+--- !u!4 &264511517 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 968244369180139514, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
+    type: 3}
+  m_PrefabInstance: {fileID: 914055120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &279741841
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,8 +978,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.1013483, y: -0.000000058423318, z: 0.0000000059517493, w: 0.99485105}
-  m_LocalPosition: {x: -0.99999845, y: 3.8165293, z: -13.194571}
+  m_LocalRotation: {x: 0.10134829, y: -0.000000059297733, z: 0.0000000060408283, w: 0.99485105}
+  m_LocalPosition: {x: 0.0000015729154, y: 3.5115292, z: -13.1945715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2746,6 +2752,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660784282468966917, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660784282468966917, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860460250388242002, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
         type: 3}
@@ -5075,7 +5091,7 @@ PrefabInstance:
     - target: {fileID: 1605879119407410068, guid: fbb60b8b498d38848a3b415b7373976b,
         type: 3}
       propertyPath: boniDuration
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5430646297062617027, guid: fbb60b8b498d38848a3b415b7373976b,
         type: 3}

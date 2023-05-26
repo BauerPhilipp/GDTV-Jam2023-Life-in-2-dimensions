@@ -53,14 +53,14 @@ public class PathBoni : MonoBehaviour
     {
         player.MoveSpeed += speedBoni;
         isBoniActive = true;
-        for (int i = 0; i < boniDuration; i++)
+        for (int i = 0; i < boniDuration ; i++)
         {
-            Debug.Log(i);
-            yield return new WaitForSecondsRealtime(1f);
-            StatusbarManager.Instance.SetTimerLabel("Speedbuff " + (boniDuration - i) + "seconds");
+            StatusbarManager.Instance.SetTimerLabel("Speedboni " + (boniDuration - i) + "seconds");
+            yield return new WaitForSecondsRealtime(1f);           
         }
-        isBoniActive = false;
+        StatusbarManager.Instance.SetTimerLabel("NO BONI ACTIVE!");
         player.MoveSpeed -= speedBoni;
+        isBoniActive = false;      
     }
 
     //anpassen auf Jumping!
@@ -68,9 +68,14 @@ public class PathBoni : MonoBehaviour
     {
         player.MaxDoubleJumps += jumpBoni;
         isBoniActive = true;
-        yield return new WaitForSeconds(boniDuration);
-        isBoniActive = false;
+        for (int i = 0; i < boniDuration; i++)
+        {
+            StatusbarManager.Instance.SetTimerLabel("Jumpboni " + (boniDuration - i) + "seconds");
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        StatusbarManager.Instance.SetTimerLabel("NO BONI ACTIVE!");
         player.MaxDoubleJumps -= jumpBoni;
+        isBoniActive = false;
     }
 
 

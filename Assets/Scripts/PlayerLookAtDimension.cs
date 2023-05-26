@@ -39,14 +39,14 @@ public class PlayerLookAtDimension : MonoBehaviour
         {
             headLook.transform.localScale = new Vector3(1, 1, -lookScale);
             Camera.main.backgroundColor = new Color(.1f,.1f,.1f);
-            ActivateDimension(0);
+            //ActivateDimension(0);
         }
         else if (Input.mousePosition.x - DimensionMouseThreshold > playerPosition.x)
         {
             //head.transform.eulerAngles = new Vector3(0, -90, 0);
             headLook.transform.localScale = new Vector3(1, 1, lookScale);
             Camera.main.backgroundColor = Color.blue;
-            ActivateDimension(1);
+            //ActivateDimension(1);
         }
     }
 
