@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerLookAtDimension : MonoBehaviour
 {
     [SerializeField] GameObject headLook;
-    [SerializeField] GameObject[] dimensions = new GameObject[2];
     [SerializeField] int DimensionMouseThresholdPercentage;
 
     private int DimensionMouseThreshold;
@@ -39,24 +38,14 @@ public class PlayerLookAtDimension : MonoBehaviour
         {
             headLook.transform.localScale = new Vector3(1, 1, -lookScale);
             Camera.main.backgroundColor = new Color(.1f,.1f,.1f);
-            //ActivateDimension(0);
+            DimensionManager.Instance.ActivateDimension(0);
         }
         else if (Input.mousePosition.x - DimensionMouseThreshold > playerPosition.x)
         {
-            //head.transform.eulerAngles = new Vector3(0, -90, 0);
             headLook.transform.localScale = new Vector3(1, 1, lookScale);
             Camera.main.backgroundColor = Color.blue;
-            //ActivateDimension(1);
+            DimensionManager.Instance.ActivateDimension(1);
         }
-    }
-
-    private void ActivateDimension(int dimension)
-    {
-        foreach (GameObject obj in dimensions)
-        {
-            obj.SetActive(false);
-        }
-        dimensions[dimension].SetActive(true);
     }
 
 }

@@ -8,8 +8,8 @@ public class PathBoni : MonoBehaviour
 {
 
     [Header("Boni. Only select one! 0 means no effect.")]
-    [SerializeField] int speedBoni;
-    [SerializeField] int jumpBoni;
+    [SerializeField] int speedBoni; public int SpeedBoni { get { return speedBoni;} private set { }}
+    [SerializeField] int jumpBoni; public int JumpBoni { get { return jumpBoni; } private set { } }
     [SerializeField] Material speedMaterial;
     [SerializeField] Material jumpingMaterial;
     [SerializeField] PhysicMaterial physicsMaterialJumping;
@@ -17,13 +17,13 @@ public class PathBoni : MonoBehaviour
 
     [Header("Duration in Seconds")]
     [Range(1f, 5f)]
-    [SerializeField] float boniDuration;
+    [SerializeField] float boniDuration; public float BoniDuration { get { return boniDuration; } private set { } }
 
 
     [SerializeField] TextMeshPro text;
+    
+    public static bool isBoniActive = false;
 
-    private PlayerController player;
-    static bool isBoniActive = false;
 
     private void Start()
     {
@@ -40,43 +40,7 @@ public class PathBoni : MonoBehaviour
         }
     }
 
-    public void ActivateBoni(PlayerController player)
-    {
-        if (isBoniActive) { return; }
-        this.player = player;
- 
-        if (speedBoni != 0) StartCoroutine(SpeedBuffDuration());
-        if (jumpBoni != 0) StartCoroutine(JumpBuffDuration());
-    }
 
-    IEnumerator SpeedBuffDuration()
-    {
-        player.MoveSpeed += speedBoni;
-        isBoniActive = true;
-        for (int i = 0; i < boniDuration ; i++)
-        {
-            StatusbarManager.Instance.SetTimerLabel("Speedboni " + (boniDuration - i) + "seconds");
-            yield return new WaitForSecondsRealtime(1f);           
-        }
-        StatusbarManager.Instance.SetTimerLabel("NO BONI ACTIVE!");
-        player.MoveSpeed -= speedBoni;
-        isBoniActive = false;      
-    }
-
-    //anpassen auf Jumping!
-    IEnumerator JumpBuffDuration()
-    {
-        player.MaxDoubleJumps += jumpBoni;
-        isBoniActive = true;
-        for (int i = 0; i < boniDuration; i++)
-        {
-            StatusbarManager.Instance.SetTimerLabel("Jumpboni " + (boniDuration - i) + "seconds");
-            yield return new WaitForSecondsRealtime(1f);
-        }
-        StatusbarManager.Instance.SetTimerLabel("NO BONI ACTIVE!");
-        player.MaxDoubleJumps -= jumpBoni;
-        isBoniActive = false;
-    }
 
 
 

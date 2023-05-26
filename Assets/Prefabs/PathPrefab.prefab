@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4594435748783228120}
   - component: {fileID: 5007584638612376208}
   - component: {fileID: 5169683368034254355}
-  - component: {fileID: 7646010137319459305}
+  - component: {fileID: 767169325085069174}
   m_Layer: 0
   m_Name: PathPrefab
   m_TagString: Path
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &5007584638612376208
 MeshFilter:
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7646010137319459305
+--- !u!65 &767169325085069174
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,5 +103,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.9999999, z: 0.49999994}
+  m_Size: {x: 2, y: 1.0000001, z: 0.50000006}
   m_Center: {x: 0, y: 0, z: 0}

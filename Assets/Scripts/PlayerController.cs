@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
 
     private Animator animator;
-    private int doubleJumpCount = 0;
+    [SerializeField] private int doubleJumpCount = 0;
     private bool isGrounded;
     private Vector3 moveDir;
     private PlayerControls playerControls;
@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         if (other.collider.gameObject.CompareTag("Path") || other.collider.gameObject.CompareTag("PathWithBoni"))
         {
             isGrounded = true;
+            Debug.Log("Collission!" + other.gameObject.name);
             doubleJumpCount = 0;
         }
         if (other.collider.gameObject.CompareTag("Path"))
@@ -62,7 +63,8 @@ public class PlayerController : MonoBehaviour
         }
         if (other.collider.gameObject.CompareTag("PathWithBoni"))
         {
-            other.gameObject.GetComponent<PathBoni>().ActivateBoni(this);
+            PathBoni pathBoni = other.collider.gameObject.GetComponent<PathBoni>();
+            DimensionManager.Instance.ActivateBoni(this, pathBoni);
         }
     }
 
