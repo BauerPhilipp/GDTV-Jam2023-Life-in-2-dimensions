@@ -6,7 +6,10 @@
         </ui:VisualElement>
         <ui:VisualElement name="Middle" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-text-align: middle-center; align-items: center; justify-content: center;" />
         <ui:VisualElement name="Bottom" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; height: 387px; align-items: center; justify-content: center;">
-            <ui:Button text="Start" display-tooltip-when-elided="true" name="Start" class="Buttons" />
+            <ui:VisualElement name="StartButtons" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; left: 150px;">
+                <ui:Button text="Start" display-tooltip-when-elided="true" name="Start" class="Buttons" />
+                <ui:Button text="Tutorial" display-tooltip-when-elided="true" name="TutorialButton" class="Buttons" style="width: 279px;" />
+            </ui:VisualElement>
             <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="Buttons" />
             <ui:Button text="Credits" display-tooltip-when-elided="true" name="Credits" class="Buttons" />
         </ui:VisualElement>
