@@ -3,6 +3,7 @@
     <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
         <ui:VisualElement name="Header" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
         <ui:VisualElement name="ButtonsContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+            <ui:Button text="NEXT LEVEL" display-tooltip-when-elided="true" name="NextLevelButton" class="Buttons" />
             <ui:Button text="RESTART" display-tooltip-when-elided="true" name="RestartButton" class="Buttons" />
             <ui:Button text="MAIN MENU" display-tooltip-when-elided="true" name="MainMenuButton" class="Buttons" />
         </ui:VisualElement>

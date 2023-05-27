@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+
+    [SerializeField] int nextLevel;
+
     private GoalUI goalUI;
 
     private void Awake()
@@ -13,7 +16,7 @@ public class Goal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        goalUI.ActivateGoalUI();
+        goalUI.ActivateGoalUI(nextLevel);
     }
 
 

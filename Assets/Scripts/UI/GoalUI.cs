@@ -12,6 +12,9 @@ public class GoalUI : MonoBehaviour
     VisualElement root;
     Button resetButton;
     Button mainMenuButton;
+    Button nextLevelButton;
+
+    private int nextLevel;
 
     private void Awake()
     {
@@ -19,9 +22,11 @@ public class GoalUI : MonoBehaviour
         
         resetButton = root.Q<Button>("RestartButton");
         mainMenuButton = root.Q<Button>("MainMenuButton");
+        nextLevelButton = root.Q<Button>("NextLevelButton");
 
         resetButton.RegisterCallback<ClickEvent>(RestartButtonClicked);
         mainMenuButton.RegisterCallback<ClickEvent>(MainMenuButtonClicked);
+        nextLevelButton.RegisterCallback<ClickEvent>(NextLevelButtonClicked);
         root.visible = false;
 
     }
@@ -30,8 +35,9 @@ public class GoalUI : MonoBehaviour
         goalUI = GetComponent<GameObject>();
     }
 
-    public void ActivateGoalUI()
+    public void ActivateGoalUI(int nextLevel)
     {
+        this.nextLevel = nextLevel;
         Time.timeScale = 0f;
         root.visible = true;
     }
@@ -46,6 +52,12 @@ public class GoalUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    void NextLevelButtonClicked(ClickEvent e)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(nextLevel);
     }
 
 }
