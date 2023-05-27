@@ -20,6 +20,10 @@
     -unity-font-style: normal;
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgba(0, 251, 255, 0.76);
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .Buttons:hover {

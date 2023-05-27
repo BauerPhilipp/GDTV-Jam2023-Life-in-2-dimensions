@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS-Files/TitleUI.uss?fileID=7433441132597879392&amp;guid=b192a50a8627880448d98e26e4c19d4c&amp;type=3#TitleUI" />
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Header" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+        <ui:VisualElement name="ButtonsContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+            <ui:Button text="RESTART" display-tooltip-when-elided="true" name="RestartButton" class="Buttons" />
+            <ui:Button text="MAIN MENU" display-tooltip-when-elided="true" name="MainMenuButton" class="Buttons" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Footer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>
