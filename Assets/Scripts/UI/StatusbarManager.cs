@@ -24,7 +24,7 @@ public class StatusbarManager : MonoBehaviour
     {
         root = GetComponent<UIDocument>().rootVisualElement;
         timerLabel = root.Q<Label>("TimerLabel");
-        timerLabel.text = "Hallo Dimension one";
+        timerLabel.text = "Hallo Dimeju";
     }
 
     public void SetTimerLabel(string s)

@@ -35,7 +35,7 @@ public class TitleScreenManager : MonoBehaviour
 
     private void StartButtonClicked(ClickEvent e)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     private void SettingsButtonClicked(ClickEvent e)
     {

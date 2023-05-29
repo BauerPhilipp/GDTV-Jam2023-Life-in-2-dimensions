@@ -571,7 +571,7 @@ Transform:
   - {fileID: 6971182752118161894}
   - {fileID: 7019357172125220011}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &7856669913108221570
 Animator:
@@ -605,9 +605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc27fcb09ac85f34aa1129a39bf21805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingPower: 5
-  moveSpeed: 3
-  maxDoubleJumps: 2
+  jumpingPower: 6
+  moveSpeed: 4
+  maxDoubleJumps: 1
+  doubleJumpCount: 0
 --- !u!114 &3860460250388242002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,10 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headLook: {fileID: 6949790270933636993}
-  dimensions:
-  - {fileID: 0}
-  - {fileID: 0}
-  DimensionMouseThresholdPercentage: 0
+  DimensionMouseThresholdPercentage: 1
 --- !u!54 &2660784282468966917
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -650,8 +648,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Constraints: 120
+  m_CollisionDetection: 1
 --- !u!136 &1865969929738167855
 CapsuleCollider:
   m_ObjectHideFlags: 0
