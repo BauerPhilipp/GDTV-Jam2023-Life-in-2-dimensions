@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS-Files/TitleUI.uss?fileID=7433441132597879392&amp;guid=b192a50a8627880448d98e26e4c19d4c&amp;type=3#TitleUI" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+        <ui:VisualElement name="MovementInfo" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 300px; padding-top: 0; padding-left: 0; padding-right: 0; padding-bottom: 0;">
+            <ui:Label tabindex="-1" text="Change dimension:&#10;Move the &#10;mouse cursor &#10;left or right&#10;side of Dimeju" display-tooltip-when-elided="true" name="Label" class="Credits" style="margin-left: 16px; margin-right: 16px; margin-top: 16px; margin-bottom: 16px; -unity-text-align: upper-center; font-size: 24px;" />
+            <ui:Label tabindex="-1" text="Control Dimeju:&#10;Move: W,A,S,D&#10;Jump: Space" display-tooltip-when-elided="true" name="Label" class="Credits" style="margin-left: 16px; -unity-text-align: upper-center; margin-right: 16px; margin-top: 16px; margin-bottom: 16px; font-size: 24px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
