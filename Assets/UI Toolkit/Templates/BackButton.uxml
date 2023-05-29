@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Button text="BACK" display-tooltip-when-elided="true" name="BackButton" class="BackButton" />
+</ui:UXML>

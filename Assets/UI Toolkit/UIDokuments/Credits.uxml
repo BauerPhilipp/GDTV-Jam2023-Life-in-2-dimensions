@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="BackButton" src="project://database/Assets/UI%20Toolkit/Templates/BackButton.uxml?fileID=9197481963319205126&amp;guid=8614349f46545f140a4beb7083aa88bc&amp;type=3#BackButton" />
+    <Style src="project://database/Assets/UI%20Toolkit/USS-Files/TitleUI.uss?fileID=7433441132597879392&amp;guid=b192a50a8627880448d98e26e4c19d4c&amp;type=3#TitleUI" />
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+        <ui:VisualElement name="ResizedContainer" style="flex-grow: 0; background-color: rgba(55, 55, 55, 0.59); width: 1400px; height: 700px; border-left-color: rgba(47, 184, 255, 0); border-right-color: rgba(47, 184, 255, 0); border-top-color: rgba(47, 184, 255, 0); border-bottom-color: rgba(47, 184, 255, 0); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; left: 35px; top: 35px;">
+            <ui:VisualElement name="ResizedContainer" style="flex-grow: 0; background-color: rgba(55, 55, 55, 0.9); width: 1400px; height: 700px; border-left-color: rgb(47, 184, 255); border-right-color: rgb(47, 184, 255); border-top-color: rgb(47, 184, 255); border-bottom-color: rgb(47, 184, 255); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; left: -35px; top: -35px; position: absolute; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="Credits" display-tooltip-when-elided="true" name="Credits" style="width: 972px; color: rgb(255, 255, 255); -unity-text-align: upper-center; font-size: 61px; -unity-font-style: bold;" />
+                <ui:Label tabindex="-1" text="Background music from Nia Mi" display-tooltip-when-elided="true" name="BackgroundMusic" class="Credits" />
+                <ui:Label tabindex="-1" text="https://opengameart.org/content/space-music-3" display-tooltip-when-elided="true" name="BackgroundMusic-Link" class="Credits" />
+                <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="BlankSpace" class="Credits" />
+                <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="BlankSpace" class="Credits" />
+                <ui:Instance template="BackButton" name="BackButton" style="width: 100%; align-items: center; justify-content: center;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

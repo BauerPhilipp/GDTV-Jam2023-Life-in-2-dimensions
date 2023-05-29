@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class TitleScreenManager : MonoBehaviour
 {
+    [SerializeField] UIDocument settingsUI;
+    [SerializeField] UIDocument creditsUI;
 
     private VisualElement root;
     private Button startButton;
@@ -16,6 +18,8 @@ public class TitleScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        settingsUI.rootVisualElement.visible = false;
+
         root = GetComponent<UIDocument>().rootVisualElement;
         startButton = root.Q<Button>("Start");
         settingsButton = root.Q<Button>("Settings");
@@ -35,11 +39,13 @@ public class TitleScreenManager : MonoBehaviour
     }
     private void SettingsButtonClicked(ClickEvent e)
     {
-       
+        root.visible = false;
+        settingsUI.rootVisualElement.visible = true;
     }
     private void CreditsButtonClicked(ClickEvent e)
     {
-        
+        root.visible = false;
+        creditsUI.rootVisualElement.visible = true;
     }
 
     private void TutorialButtonClicked(ClickEvent e)

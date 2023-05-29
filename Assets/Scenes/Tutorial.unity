@@ -173,7 +173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hi! My name is Dimeju-IV.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -468,8 +468,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127030794}
-  m_LocalRotation: {x: 0.026969949, y: -0.00000007559275, z: 0.0000000020394748, w: 0.9996363}
-  m_LocalPosition: {x: 0.0000019155168, y: 4.719203, z: -13.385453}
+  m_LocalRotation: {x: 0.026442857, y: -0.000000059583787, z: 0.0000000015761166,
+    w: 0.99965036}
+  m_LocalPosition: {x: 0.0000015957371, y: 4.7086725, z: -13.386016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -974,8 +975,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.026969949, y: -0.00000007559275, z: 0.0000000020394748, w: 0.9996363}
-  m_LocalPosition: {x: 0.0000019155168, y: 4.719203, z: -13.385453}
+  m_LocalRotation: {x: 0.026442857, y: -0.000000059583787, z: 0.0000000015761166,
+    w: 0.99965036}
+  m_LocalPosition: {x: 0.0000015957371, y: 4.7086725, z: -13.386016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2303,6 +2305,11 @@ PrefabInstance:
     - target: {fileID: 1290232342479980548, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
         type: 3}
       propertyPath: maxDoubleJumps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860460250388242002, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,
+        type: 3}
+      propertyPath: DimensionMouseThresholdPercentage
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7649353478082162215, guid: 6dbc7ba6fcf3b0e4ebd6b6564687882b,

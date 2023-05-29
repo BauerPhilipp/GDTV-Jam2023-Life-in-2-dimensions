@@ -49,3 +49,31 @@
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgba(0, 251, 255, 0.76);
 }
+
+.Credits {
+    color: rgb(255, 255, 255);
+    font-size: 43px;
+}
+
+.BackButton {
+    width: 15%;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-left-color: rgba(135, 60, 60, 0);
+    border-right-color: rgba(135, 60, 60, 0);
+    border-top-color: rgba(135, 60, 60, 0);
+    border-bottom-color: rgba(135, 60, 60, 0);
+    background-color: rgb(135, 60, 60);
+    margin-left: 46px;
+    margin-right: 46px;
+    margin-top: 46px;
+    margin-bottom: 46px;
+    color: rgb(255, 255, 255);
+    font-size: 33px;
+}
